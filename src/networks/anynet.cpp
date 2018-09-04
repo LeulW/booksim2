@@ -79,6 +79,7 @@ AnyNet::~AnyNet(){
 
 void AnyNet::_ComputeSize( const Configuration &config ){
   file_name = config.GetStr("network_file");
+  file_name.insert(0, "examples/anynet/");
   if(file_name==""){
     cout<<"No network file name provided"<<endl;
     exit(-1);
